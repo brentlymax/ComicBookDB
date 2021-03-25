@@ -36,11 +36,14 @@ public class ComicBookDB {
 
 			if (input.matches(tables)) {
 				manageTables();
-			} else if (input.matches(parser)) {
+			}
+			else if (input.matches(parser)) {
 				parseJson();
-			} else if (input.matches(exit)) {
+			}
+			else if (input.matches(exit)) {
 				notDone = false;
-			} else {
+			}
+			else {
 				System.out.println("ERROR: invalid input.");
 			}
 		}
@@ -74,14 +77,18 @@ public class ComicBookDB {
 
 			if (input.matches(create)) {
 				manager.createTables();
-			} else if (input.matches(drop)) {
+			}
+			else if (input.matches(drop)) {
 				manager.dropTables();
-			} else if (input.matches(reset)) {
+			}
+			else if (input.matches(reset)) {
 				manager.dropTables();
 				manager.createTables();
-			} else if (input.matches(exit)) {
+			}
+			else if (input.matches(exit)) {
 				notDoneManaging = false;
-			} else {
+			}
+			else {
 				System.out.println("ERROR: invalid input.");
 			}
 		}
@@ -116,11 +123,14 @@ public class ComicBookDB {
 
 			if (input.matches(graded)) {
 				parser.parseGraded();
-			} else if (input.matches(ungraded)) {
+			}
+			else if (input.matches(ungraded)) {
 				parser.parseUngraded();
-			} else if (input.matches(exit)) {
+			}
+			else if (input.matches(exit)) {
 				notDoneParsing = false;
-			} else {
+			}
+			else {
 				System.out.println("ERROR: invalid input.");
 			}
 		}

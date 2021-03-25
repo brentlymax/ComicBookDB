@@ -84,7 +84,8 @@ public class DBJsonParser {
 			if (ps != null){
 				try {
 					ps.executeBatch();
-				} catch (SQLException e) {
+				}
+				catch (SQLException e) {
 					System.out.println("Error: failed to execute batch.");
 					System.out.println("SQLState:" + e.getSQLState());
 					System.out.println("Vendor Error: " + e.getErrorCode());
@@ -94,7 +95,8 @@ public class DBJsonParser {
 			closePreparedStatement(ps);
 			fileBuffer.close();
 
-		} catch (FileNotFoundException e) {
+		}
+		catch (FileNotFoundException e) {
 			System.out.println("Error: file not found.");
 			System.out.println("Message: " + e.getMessage() + "\n");
 		}
@@ -145,7 +147,8 @@ public class DBJsonParser {
 			if (ps != null){
 				try {
 					ps.executeBatch();
-				} catch (SQLException e) {
+				}
+				catch (SQLException e) {
 					System.out.println("Error: failed to execute batch.");
 					System.out.println("SQLState:" + e.getSQLState());
 					System.out.println("Vendor Error: " + e.getErrorCode());
@@ -155,7 +158,8 @@ public class DBJsonParser {
 			closePreparedStatement(ps);
 			fileBuffer.close();
 
-		} catch (FileNotFoundException e) {
+		}
+		catch (FileNotFoundException e) {
 			System.out.println("Error: file not found.");
 			System.out.println("Message: " + e.getMessage() + "\n");
 		}
@@ -169,7 +173,8 @@ public class DBJsonParser {
 		if (ps != null) {
 			try {
 				ps.close();
-			} catch (SQLException e) {
+			}
+			catch (SQLException e) {
 				System.out.println("Error: failed to close PreparedStatement.");
 				System.out.println("SQLState:" + e.getSQLState());
 				System.out.println("Vendor Error: " + e.getErrorCode());

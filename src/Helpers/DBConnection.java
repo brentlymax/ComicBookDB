@@ -17,11 +17,14 @@ public class DBConnection {
 		conn = null;
 		try {
 			conn = openConnection();
-			if (conn == null)
+			if (conn == null) {
 				System.out.println("Error: failed to connect to database.");
-		} catch (SQLException e) {
+			}
+		}
+		catch (SQLException e) {
 			System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -31,9 +34,11 @@ public class DBConnection {
 	 */
 	public void closeConnection() {
 		try {
-			if (conn != null)
+			if (conn != null) {
 				conn.close();
-		} catch (SQLException e) {
+			}
+		}
+		catch (SQLException e) {
 			System.out.println("Error: failed to close database connection.");
 			System.out.println("SQLState:" + e.getSQLState());
 			System.out.println("Vendor Error: " + e.getErrorCode());

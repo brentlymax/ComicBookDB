@@ -61,7 +61,8 @@ public class DBTableManager {
 			ps = conn.getConnection().prepareStatement(ungradedStr);
 			ps.execute();
 			System.out.println("Tables created.\n");
-		} catch (SQLException e) {
+		}
+		catch (SQLException e) {
 			System.out.println("Error: failed to create tables.");
 			System.out.println("SQLState:" + e.getSQLState());
 			System.out.println("Vendor Error: " + e.getErrorCode());
@@ -83,7 +84,8 @@ public class DBTableManager {
 			ps = conn.getConnection().prepareStatement(ungradedStr);
 			ps.execute();
 			System.out.println("Tables dropped.\n");
-		} catch (SQLException e) {
+		}
+		catch (SQLException e) {
 			System.out.println("Error: failed to drop tables.");
 			System.out.println("SQLState:" + e.getSQLState());
 			System.out.println("Vendor Error: " + e.getErrorCode());
